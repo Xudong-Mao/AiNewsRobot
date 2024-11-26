@@ -8,7 +8,7 @@ import os
 from sqlalchemy import Boolean, DateTime, ForeignKey, create_engine, Column, Integer, String, Text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
-from .database import Base
+from database import Base
 
 # from dotenv import load_dotenv, find_dotenv
 # load_dotenv()

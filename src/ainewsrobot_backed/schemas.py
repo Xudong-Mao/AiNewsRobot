@@ -5,19 +5,24 @@
 '''
 
 from pydantic import BaseModel
+from typing import Optional, List
 from datetime import datetime
 
 class ArticleBase(BaseModel):
     title: str
-    summary: str
     content: str
+    publication_date: str
+    summary: Optional[str] = None
 
 class ArticleCreate(ArticleBase):
     pass
 
-class Article(ArticleBase):
+class ArticleResponse(ArticleBase):
     id: int
-    publication_date: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
+
+class ArticleList(BaseModel):
+    total: int
+    items: List[ArticleResponse]

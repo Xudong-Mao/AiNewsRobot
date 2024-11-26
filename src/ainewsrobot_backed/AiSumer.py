@@ -10,7 +10,7 @@ import os, asyncio
 from dotenv import load_dotenv, find_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from Python.AINewsRobot.ainewsrobot_backed.src.ainewsrobot_backed.models import Article
+from models import Article
 from sqlalchemy import Column, Text
 
 # 加载环境变量
