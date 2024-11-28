@@ -1,4 +1,7 @@
-from news_service.utils.GetNews import fetch_latest_news
+from ..src.news_service.utils.GetNews import fetch_latest_news, get_db_context
+import asyncio
+
+
 
 async def main():
     async with get_db_context() as db:
